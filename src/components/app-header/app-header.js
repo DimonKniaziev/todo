@@ -1,13 +1,13 @@
 import React from "react";
-import './app-header.css';
+import './app-header.scss';
 
 const AppHeader = ({todo, done, appHeaderStyle}) => {
     return (
         <div className="app-header">            
-            <h1 className="mr-2">
+            <h1>
                 Todo List
             </h1>             
-            <h2 className="text-gray-400">
+            <h2>
                 {todo} more to do, {done} done
             </h2>            
         </div>

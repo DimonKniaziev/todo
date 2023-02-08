@@ -1,7 +1,0 @@
-.item-status-filter {
-    @apply flex justify-between w-full h-10 sm:w-60  border rounded-md shrink-0 
-}
-
-.active {
-    @apply bg-cyan-400 font-bold text-white
-}

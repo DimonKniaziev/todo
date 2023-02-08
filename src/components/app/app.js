@@ -4,7 +4,7 @@ import SearchPanel from '../search-panel';
 import ItemStatusFilter from "../item-status-filter";
 import TodoList from '../todo-list';
 import ItemAddForm from "../item-add-form";
-import "./app.css";
+import "./app.scss";
 
 export default class App extends Component{
   maxId = 100;
@@ -116,14 +116,12 @@ export default class App extends Component{
         <div>
           <AppHeader todo={todoCount} done={doneCount}/>
         </div>
-        <div className="flex justify-between mt-4 flex-wrap-reverse sm:flex-nowrap">
+        <div className="search-filter">
           <SearchPanel onSearchChange={this.onSearchChange}/>
           <ItemStatusFilter filter={filter} onFilterChange={this.onFilterChange}/>
        </div>
-        <div>
           <TodoList todos={visibleItems} onDeleted={this.deleteItem} onToggleImportant={this.onToggleImportant} onToggleDone={this.onToggleDone}/>
           <ItemAddForm onItemAdded={this.addItem}/>
-        </div>              
       </div>
     );
   }

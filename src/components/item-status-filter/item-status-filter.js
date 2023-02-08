@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './item-status-filter.css';
+import './item-status-filter.scss';
 
 export default class ItemStatusFilter extends Component {
     buttons = [
@@ -14,7 +14,7 @@ export default class ItemStatusFilter extends Component {
             const isActive = filter === name;
             const fontStyle = isActive ? 'active' : '';
             return (
-                <button type="button" className={`${fontStyle} ${borderStyle} w-full`} key={name} onClick={() => onFilterChange(name)}>
+                <button type="button" className={`${fontStyle} ${borderStyle}`} key={name} onClick={() => onFilterChange(name)}>
                     {label}
                 </button>
             );

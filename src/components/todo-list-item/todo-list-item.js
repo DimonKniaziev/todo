@@ -1,30 +1,30 @@
 import React, {Component} from "react";
-import './todo-list-item.css';
+import './todo-list-item.scss';
 
 export default class TodoListItem extends Component {
     render () {
         const { label, onDeleted, onToggleImportant, onToggleDone, important, done} = this.props;
         
-        let classNames = 'text-lg';
+        let classNames = '';
         if(done) {
-            classNames += ' line-through decoration-black';
+            classNames += ' done';
         }
         if(important) {
-            classNames += ' text-cyan-400 font font-medium';
+            classNames += ' important';
         }
 
         return (
             <div className="todo-list-item">
                 <div>
-                    <span className={`${classNames} justify-self-start ml-3`} onClick={onToggleDone}>
+                    <span className={classNames} onClick={onToggleDone}>
                         { label }
                     </span>
                 </div>
                 <div className="w-22">
-                    <button type="button" className="text-green-500 border-green-500" onClick={onToggleImportant}>
+                    <button type="button" className="important-btn" onClick={onToggleImportant}>
                         <i className="bi bi-exclamation"></i>
                     </button>
-                    <button type="button" className="text-red-500 border-red-500" onClick={onDeleted}>
+                    <button type="button" className="delete-btn" onClick={onDeleted}>
                         <i className="bi bi-trash"></i>
                     </button>  
                 </div>
