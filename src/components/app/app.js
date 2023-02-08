@@ -37,14 +37,16 @@ export default class App extends Component{
   };
 
   addItem = (text) => {
-    const newItem = this.createTodoItem(text);
+    if(text.length > 0) {
+      const newItem = this.createTodoItem(text);
 
-    this.setState(({todoData}) => {
-      const newTodoData = [...todoData, newItem];
-      return {
-        todoData: newTodoData
-      };
-    })
+      this.setState(({todoData}) => {
+        const newTodoData = [...todoData, newItem];
+        return {
+          todoData: newTodoData
+        };
+      })
+    }
   };
 
   toggleProperty(arr, id, propName) {
@@ -109,7 +111,7 @@ export default class App extends Component{
     const todoCount = todoData.length - doneCount;
     
     return (
-      <div className="border border-black max-w-lg m-auto mt-5 p-5">        
+      <div className="border border-black max-w-4xl m-auto mt-5 p-5">        
         <div>
           <AppHeader todo={todoCount} done={doneCount}/>
         </div>

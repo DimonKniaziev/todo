@@ -3,9 +3,9 @@ import './app-header.css';
 
 const AppHeader = ({todo, done}) => {
     return (
-        <div className="flex justify-between items-baseline flex-wrap">
+        <div className="app-header flex justify-between items-baseline flex-wrap">
             
-            <h1 className="text-2xl font-semibold">
+            <h1 className="font-semibold mr-2">
                 Todo List
             </h1>
              

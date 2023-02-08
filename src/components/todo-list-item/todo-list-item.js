@@ -7,7 +7,7 @@ export default class TodoListItem extends Component {
         
         let classNames = 'text-lg';
         if(done) {
-            classNames += ' line-through';
+            classNames += ' line-through decoration-black';
         }
         if(important) {
             classNames += ' text-cyan-400 font font-medium';
