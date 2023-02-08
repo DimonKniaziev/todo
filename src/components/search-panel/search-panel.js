@@ -14,7 +14,7 @@ export default class SearchPanel extends Component{
 
   render() {
     return (
-      <input placeholder="type to search" className="search-panel  focus: outline-cyan-400" value={this.state.term} onChange={this.onSearchChange}/>
+      <input placeholder="type to search" className="search-panel" value={this.state.term} onChange={this.onSearchChange}/>
     );
   }
 }

@@ -1,5 +1,5 @@
 .item-status-filter {
-    @apply flex justify-between w-60 border rounded-md
+    @apply flex justify-between w-full h-10 sm:w-60  border rounded-md shrink-0 
 }
 
 .active {

@@ -116,7 +116,7 @@ export default class App extends Component{
         <div>
           <AppHeader todo={todoCount} done={doneCount}/>
         </div>
-        <div className="flex justify-between mt-4">
+        <div className="flex justify-between mt-4 flex-wrap-reverse sm:flex-nowrap">
           <SearchPanel onSearchChange={this.onSearchChange}/>
           <ItemStatusFilter filter={filter} onFilterChange={this.onFilterChange}/>
        </div>

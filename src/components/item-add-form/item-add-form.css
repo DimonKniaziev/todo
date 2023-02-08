@@ -1,5 +1,5 @@
 .item-add-form {
-    @apply flex justify-between mt-2
+    @apply flex justify-between mt-2 flex-wrap sm:flex-nowrap
 }
 
 .item-add-form input {
@@ -7,8 +7,13 @@
 }
 
 .input {
-    @apply w-full mr-1 p-2;
+    @apply w-full sm:mr-1 p-2
 }
+
+.input:focus {
+    @apply outline-cyan-400
+}
+
 .submit {
-    @apply w-24 h-11 shrink-0
+    @apply w-full h-11 shrink-0 mt-1 sm:mt-0 sm:w-24
 }

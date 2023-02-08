@@ -23,7 +23,7 @@ export default class ItemAddForm extends Component {
     render() {
         return (
             <form className="item-add-form" onSubmit={this.onSubmit}>
-                <input type="text" className="input  focus:outline-cyan-400" onChange={this.onLabelChange} placeholder="What needs to be done" value={this.state.label}>
+                <input type="text" className="input" onChange={this.onLabelChange} placeholder="What needs to be done" value={this.state.label}>
                 </input>
                 <input type="submit" value="Add Item" className="submit">
                 </input>
