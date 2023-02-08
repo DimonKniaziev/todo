@@ -4,6 +4,7 @@ import SearchPanel from '../search-panel';
 import ItemStatusFilter from "../item-status-filter";
 import TodoList from '../todo-list';
 import ItemAddForm from "../item-add-form";
+import "./app.css";
 
 export default class App extends Component{
   maxId = 100;
@@ -111,7 +112,7 @@ export default class App extends Component{
     const todoCount = todoData.length - doneCount;
     
     return (
-      <div className="border border-black max-w-4xl m-auto mt-5 p-5">        
+      <div className="app">        
         <div>
           <AppHeader todo={todoCount} done={doneCount}/>
         </div>

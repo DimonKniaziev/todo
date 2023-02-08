@@ -1,0 +1,3 @@
+.search-panel {
+    @apply border-2 p-2 rounded-md w-full mr-1
+}

@@ -1,3 +1,7 @@
+.app-header {
+    @apply flex justify-between items-baseline flex-wrap font-semibold
+}
+
 .app-header h1{
     font-size: 30px;
 }

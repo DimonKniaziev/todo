@@ -1,0 +1,14 @@
+.item-add-form {
+    @apply flex justify-between mt-2
+}
+
+.item-add-form input {
+    @apply border-2 rounded-md;
+}
+
+.input {
+    @apply w-full mr-1 p-2;
+}
+.submit {
+    @apply w-24 h-11 shrink-0
+}

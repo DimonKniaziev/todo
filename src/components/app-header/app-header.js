@@ -1,15 +1,15 @@
 import React from "react";
 import './app-header.css';
 
-const AppHeader = ({todo, done}) => {
+const AppHeader = ({todo, done, appHeaderStyle}) => {
     return (
-        <div className="app-header flex justify-between items-baseline flex-wrap">
+        <div className="app-header">
             
-            <h1 className="font-semibold mr-2">
+            <h1 className="mr-2">
                 Todo List
             </h1>
              
-            <h2 className="font-semibold text-gray-400">
+            <h2 className="text-gray-400">
                 {todo} more to do, {done} done
             </h2>            
         </div>

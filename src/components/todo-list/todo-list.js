@@ -14,7 +14,7 @@ const TodoList = ( {todos, onDeleted, onToggleImportant, onToggleDone} ) => {
     });
 
     return (
-      <ul className="mt-5 border-2 border-b-0 rounded-md">
+      <ul className="todo-list">
         {todoItems}
       </ul>
     );

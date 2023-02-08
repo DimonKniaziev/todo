@@ -12,7 +12,7 @@ export default class ItemStatusFilter extends Component {
         const {filter, onFilterChange} = this.props;
         const buttons = this.buttons.map(({name, label, borderStyle}) => {
             const isActive = filter === name;
-            const fontStyle = isActive ? 'bg-cyan-400 font-bold text-white' : '';
+            const fontStyle = isActive ? 'active' : '';
             return (
                 <button type="button" className={`${fontStyle} ${borderStyle} w-full`} key={name} onClick={() => onFilterChange(name)}>
                     {label}
@@ -21,7 +21,7 @@ export default class ItemStatusFilter extends Component {
         });
 
         return (
-            <div className="flex justify-between w-60 border rounded-md">
+            <div className="item-status-filter">
                 {buttons}
             </div>
         );

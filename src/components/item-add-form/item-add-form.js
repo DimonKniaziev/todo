@@ -22,12 +22,11 @@ export default class ItemAddForm extends Component {
     
     render() {
         return (
-            <form className="flex justify-between mt-2" onSubmit={this.onSubmit}>
-                <input type="text" className="border-2 rounded-md w-full mr-1 p-2" onChange={this.onLabelChange} placeholder="What needs to be done" value={this.state.label}>
+            <form className="item-add-form" onSubmit={this.onSubmit}>
+                <input type="text" className="input  focus:outline-cyan-400" onChange={this.onLabelChange} placeholder="What needs to be done" value={this.state.label}>
                 </input>
-                <button className="border-2 w-24 h-11 rounded-md shrink-0">
-                    Add Item
-                </button>
+                <input type="submit" value="Add Item" className="submit">
+                </input>
             </form>
         );
     }
