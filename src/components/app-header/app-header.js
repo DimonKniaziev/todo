@@ -1,7 +1,7 @@
 import React from "react";
 import './app-header.scss';
 
-const AppHeader = ({todo, done, appHeaderStyle}) => {
+const AppHeader = ({todo, done}) => {
     return (
         <div className="app-header">            
             <h1>

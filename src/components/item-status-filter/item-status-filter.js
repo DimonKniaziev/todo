@@ -1,29 +1,28 @@
-import React, {Component} from "react";
+import React from "react";
 import './item-status-filter.scss';
 
-export default class ItemStatusFilter extends Component {
-    buttons = [
+
+const ItemStatusFilter = ({filter, onFilterChange}) => {
+    const buttonsParams = [
         {name: 'all', label: 'All', borderStyle: ' border-r-2 rounded-l-md'},
         {name: 'active', label: 'Active', borderStyle: 'border-r-2'},
         {name: 'done', label: 'Done', borderStyle: 'rounded-r-md'}
     ];
-    
-    render() {
-        const {filter, onFilterChange} = this.props;
-        const buttons = this.buttons.map(({name, label, borderStyle}) => {
-            const isActive = filter === name;
-            const fontStyle = isActive ? 'active' : '';
-            return (
-                <button type="button" className={`${fontStyle} ${borderStyle}`} key={name} onClick={() => onFilterChange(name)}>
-                    {label}
-                </button>
-            );
-        });
-
+    const buttons = buttonsParams.map(({name, label, borderStyle}) => {
+        const isActive = filter === name;
+        const fontStyle = isActive ? 'active' : '';
         return (
-            <div className="item-status-filter">
-                {buttons}
-            </div>
+            <button type="button" className={`${fontStyle} ${borderStyle}`} key={name} onClick={() => onFilterChange(name)}>
+                {label}
+            </button>
         );
-    }
+    });
+
+    return (
+        <div className="item-status-filter">
+            {buttons}
+        </div>
+    );
 }
+
+export default ItemStatusFilter;

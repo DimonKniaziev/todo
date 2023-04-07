@@ -1,33 +1,27 @@
-import React, {Component} from "react";
-import "./item-add-form.scss"
+import React, {useState} from "react";
+import "./item-add-form.scss";
 
-export default class ItemAddForm extends Component {    
-    state = {
-        label: ''
-    };
-    
-    onLabelChange = (e) => {
-        this.setState({
-            label: e.target.value
-        });
+const ItemAddForm = ({onItemAdded}) => {
+    const [label, setLabel] = useState('');
+
+    const onLabelChange = (e) => {
+        setLabel(e.target.value);
     };
 
-    onSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
-        this.props.onItemAdded(this.state.label);
-        this.setState({
-            label: ''
-        });
+        onItemAdded(label);
+        setLabel('');
     }
-    
-    render() {
-        return (
-            <form className="item-add-form" onSubmit={this.onSubmit}>
-                <input type="text" className="input" onChange={this.onLabelChange} placeholder="What needs to be done" value={this.state.label}>
-                </input>
-                <input type="submit" value="Add Item" className="submit">
-                </input>
-            </form>
-        );
-    }
+
+    return (
+        <form className="item-add-form" onSubmit={onSubmit}>
+            <input type="text" className="input" onChange={onLabelChange} placeholder="What needs to be done" value={label}>
+            </input>
+            <input type="submit" value="Add Item" className="submit">
+            </input>
+        </form>
+    );
 }
+
+export default ItemAddForm;
