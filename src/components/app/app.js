@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import ItemStatusFilter from "../item-status-filter";
@@ -7,14 +7,14 @@ import ItemAddForm from "../item-add-form";
 import "./app.scss";
 
 const App = () => {
-  let maxId = 100;
+  const maxId = useRef(100);
 
   const createTodoItem = (label) => {
     return {
       label,
       important: false,
       done: false,
-      id: maxId++
+      id: maxId.current++
     }
   }
 
